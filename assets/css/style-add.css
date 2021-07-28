@@ -1,0 +1,70 @@
+
+
+/*--------------------------------------------------------------
+# Contenedores
+--------------------------------------------------------------*/
+.container-img-000{
+  height: 350px;
+  width: auto;
+}
+
+
+.container-img-2-000{
+  height: 280px;
+  width: auto;
+}
+.container-img-3-000{
+  height: 220px;
+  width: auto;
+}
+
+.container-img-4-000{
+  height: 500px;
+  width: auto;
+}
+
+/*--------------------------------------------------------------
+# Imagenes
+--------------------------------------------------------------*/
+.img-product-000 {
+  height: 100%;
+  width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+# Tablas
+--------------------------------------------------------------*/
+
+.table-style{
+  background-color: #cda45e;
+  border-radius: 10px;
+}
+
+.table-color{
+  background-color: white;
+  border-radius: 10px;
+}
+/*--------------------------------------------------------------
+# 
+--------------------------------------------------------------*/
+
+.p-top{
+  padding-top: 12px;
+}
+
+.s-pad{
+  padding: 5px;
+}
+.c-pad{
+  padding: 10px;
+}
+.borde10px{
+  border-radius: 10px;
+}
+
+.logo-footer{
+  width: 200px; 
+  height:  200px;
+  border-radius: 20px;
+}

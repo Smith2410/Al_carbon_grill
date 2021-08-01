@@ -9,6 +9,7 @@ $dVenta=mysqli_fetch_array($sVenta, MYSQLI_ASSOC);
 $sCliente=ejecutarSQL::consultar("SELECT * FROM cliente WHERE DNI='".$dVenta['Cliente_dni']."'");
 $dCliente=mysqli_fetch_array($sCliente, MYSQLI_ASSOC);
 class PDF extends FPDF{
+    
     // Cabecera de página
     function Header()
     {

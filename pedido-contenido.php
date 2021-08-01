@@ -20,21 +20,21 @@
                     <td>s/.<?php echo $rw['TotalPagar']; ?></td>
                     <td>
                         <?php
-                            switch ($rw['Estado'])
-                            {
-                                case 'Enviado':
-                                echo "En camino";
-                                break;
-                                case 'Pendiente':
-                                echo "En espera";
-                                break;
-                                case 'Entregado':
-                                echo "Entregado";
-                                break;
-                                default:
-                                echo "Sin informacion";
-                                break;
-                            }
+                        switch ($rw['Estado'])
+                        {
+                            case 'Enviado':
+                            echo "En camino";
+                            break;
+                            case 'Pendiente':
+                            echo "En espera";
+                            break;
+                            case 'Entregado':
+                            echo "Entregado";
+                            break;
+                            default:
+                            echo "Sin informacion";
+                            break;
+                        }
                         ?>
                     </td>
                     <td>

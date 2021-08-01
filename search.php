@@ -29,8 +29,9 @@
                                         if(mysqli_num_rows($consultar_productos)>=1)
                                         {
                                             ?>
+                                            <!-- === Lista de platillos encontrados ======= -->
                                             <div class="col-xs-12">
-                                                <h3 class="text-center">Platillos y categorias relacionados con: <span class="text-warning"><?php echo $search; ?></span></h3>
+                                                <h3 class="text-center"><?php echo $search; ?></h3>
                                             </div><br>
                                             <?php 
                                             while($prod=mysqli_fetch_array($consultar_productos, MYSQLI_ASSOC))
@@ -56,7 +57,7 @@
                                             }
                                         }else{
                                             ?>
-                                            <h2 class="text-center">Lo sentimos, no hemos encontrado productos y/o categorias con el nombre <strong class="text-warning">"<?php echo $search; ?>"</strong></h2>
+                                            <h2 class="text-center">Lo sentimos, no hemos encontrado platillos con el nombre <strong class="text-warning">"<?php echo $search; ?>"</strong></h2>
                                             <?php
                                         }
                                     ?>
@@ -65,7 +66,7 @@
                             <?php
                         }else{
                             ?>
-                            <h2 class="text-center">Por favor escriba el nombre o marca del producto que desea buscar</h2>
+                            <h2 class="text-center">Por favor escriba el nombre del platillo que desea buscar.</h2>
                             <?php
                         }
                     ?>

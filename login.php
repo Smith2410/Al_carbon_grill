@@ -10,6 +10,7 @@
             <section class="specials">
                 <div class="container p-top" data-aos="fade-up">
                     <div class="row" data-aos="fade-up" data-aos-delay="100">
+                        <!-- ===== Menu lateral ===== -->
                         <div class="col-lg-3 col-md-4">
                             <ul class="nav nav-tabs flex-column">
                                 <li class="nav-item">
@@ -23,6 +24,7 @@
                                 </li>
                             </ul>
                         </div>
+
                         <div class="col-lg-9 col-md-8 mt-4 mt-lg-0">
                             <div class="tab-content">
 
@@ -46,8 +48,8 @@
                                                                         <input type="password" class="form-control" name="clave-login" required="" placeholder="Contraseña">
                                                                     </div>
                                                                 </div>
-                                                                
-                                                               <div class="col-lg-6 row">
+                                                                <!-- ===== Tipo de inicio de sesion ===== -->
+                                                                <div class="col-lg-6 row">
                                                                    <p class="text-warning">Iniciar como:</p>
                                                                    <div class="radio col-lg-12 col-3">
                                                                         <label class="text-warning">

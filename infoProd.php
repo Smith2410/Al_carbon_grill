@@ -24,63 +24,67 @@
                                 {
                                     $imagenFile="./assets/img-products/".$fila['Imagen']; 
                                 }else{ 
-                                $imagenFile="./assets/img-products/default.png"; 
+                                    $imagenFile="./assets/img-products/default.png"; 
                                 }
                                 ?>
-                                    <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                                        <div class="about-img container-img-4">
-                                            <img src="<?php echo $imagenFile ?>" class="img-product" alt="">
-                                        </div>
+
+                                <!-- ===== Imagen del platillo ===== -->
+                                <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="about-img container-img-4">
+                                        <img src="<?php echo $imagenFile ?>" class="img-product" alt="">
                                     </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="events">
-                                            <div class="container" data-aos="fade-up">
-                                                <div class="event-item">
-                                                    <div class="content">
-                                                        <h3><?php echo $fila['NombreProd'] ?></h3>
-                                                        <div class="price">
-                                                            <p><span>s/.<?php echo ''.number_format(($fila['Precio']-($fila['Precio']*($fila['Descuento']/100))), 2, '.', '').'';?></span></p>
-                                                        </div>
-                                                        <p class="fst-italic">
-                                                        <?php echo $fila['Descripcion'] ?>
-                                                        </p>
-                                                        <?php
-                                                            if($_SESSION['nombreAdmin']!="" || $_SESSION['nombreUser']!="" || $_SESSION['nombreRepar']!="")
-                                                            { ?>
-                                                                    <form action="<?php echo SERVERURL; ?>process/carrito.php" method="POST" class="FormCatElec" data-form="">
-                                                                        <input type="hidden" value="<?php echo $fila['CodigoProd'] ?>" name="codigo">
-                                                                        <p class="text-center text-warning">Agrega la cantidad de productos que añadiras al carrito</p>
-                                                                        <div class="form-group">
-                                                                            <input type="number" class="form-control" value="1" min="1" name="cantidad">
-                                                                        </div>
-                                                                        </br>
-                                                                        <div class="text-center">
-                                                                            <button class="btn book-a-table-btn scrollto col-lg-6"><i class="bi bi-cart"></i>&nbsp;&nbsp; Añadir al carrito</button>
-                                                                        </div>
-                                                                    </form>
-                                                                    <div class="ResForm"></div>
-                                                                <?php 
-                                                            }else{
-                                                                ?>
-                                                                <p class="text-center text-warning">Para agregar productos al carrito, primero debes iniciar sesion.</p>
-                                                            
-                                                                <div class="text-center">
-                                                                    <a href="login.php" class="btn book-a-table-btn scrollto"><i class="bi bi-box-arrow-right"></i>&nbsp;&nbsp; Iniciar sesion</a>
-                                                                </div>
-                                                                <?php 
-                                                            }
-                                                        ?>  
-                                                        </br>
-                                                        <div class="text-center">
-                                                            <a href="product.php" class="btn book-a-table-btn scrollto col-lg-6">
-                                                                <i class="bi bi-arrow-left-square"></i>&nbsp;&nbsp;Regresar a la tienda
-                                                            </a>
-                                                        </div>
+                                </div>
+
+                                <!-- ===== Datos del platillo ===== -->
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="events">
+                                        <div class="container" data-aos="fade-up">
+                                            <div class="event-item">
+                                                <div class="content">
+                                                    <h3><?php echo $fila['NombreProd'] ?></h3>
+                                                    <div class="price">
+                                                        <p><span>s/.<?php echo ''.number_format(($fila['Precio']-($fila['Precio']*($fila['Descuento']/100))), 2, '.', '').'';?></span></p>
+                                                    </div>
+                                                    <p class="fst-italic">
+                                                    <?php echo $fila['Descripcion'] ?>
+                                                    </p>
+                                                    <?php
+                                                        if($_SESSION['nombreAdmin']!="" || $_SESSION['nombreUser']!="" || $_SESSION['nombreRepar']!="")
+                                                        { ?>
+                                                                <form action="<?php echo SERVERURL; ?>process/carrito.php" method="POST" class="FormCatElec" data-form="">
+                                                                    <input type="hidden" value="<?php echo $fila['CodigoProd'] ?>" name="codigo">
+                                                                    <p class="text-center text-warning">Agrega la cantidad de productos que añadiras al carrito</p>
+                                                                    <div class="form-group">
+                                                                        <input type="number" class="form-control" value="1" min="1" name="cantidad">
+                                                                    </div>
+                                                                    </br>
+                                                                    <div class="text-center">
+                                                                        <button class="btn book-a-table-btn scrollto col-lg-6"><i class="bi bi-cart"></i>&nbsp;&nbsp; Añadir al carrito</button>
+                                                                    </div>
+                                                                </form>
+                                                                <div class="ResForm"></div>
+                                                            <?php 
+                                                        }else{
+                                                            ?>
+                                                            <p class="text-center text-warning">Para agregar productos al carrito, primero debes iniciar sesion.</p>
+                                                        
+                                                            <div class="text-center">
+                                                                <a href="login.php" class="btn book-a-table-btn scrollto"><i class="bi bi-box-arrow-right"></i>&nbsp;&nbsp; Iniciar sesion</a>
+                                                            </div>
+                                                            <?php 
+                                                        }
+                                                    ?>  
+                                                    </br>
+                                                    <div class="text-center">
+                                                        <a href="product.php" class="btn book-a-table-btn scrollto col-lg-6">
+                                                            <i class="bi bi-arrow-left-square"></i>&nbsp;&nbsp;Regresar a la tienda
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                                 <?php
                             }
                         ?>
@@ -88,6 +92,7 @@
                 </div>
             </section>
 
+            <!-- ===== Mas platillos ===== -->
             <section class="chefs">
                 <div class="container" data-aos="fade-up">
                     <div class="section-title">
@@ -102,7 +107,7 @@
                                 while($fila=mysqli_fetch_array($consulta, MYSQLI_ASSOC))
                                 {
                                     ?>
-                                    <div class="col-lg-2 col-md-4">
+                                    <div class="col-lg-2 col-md-4 col-6">
                                         <div class="member" data-aos="zoom-in" data-aos-delay="100">
                                             <div class="container-img-3">
                                                <img src="<?php echo SERVERURL; ?>assets/img-products/<?php if($fila['Imagen']!="" && is_file("<?php echo SERVERURL; ?>assets/img-products/".$fila['Imagen'])){ echo $fila['Imagen']; }else{ echo "default.png"; } ?>" class="img-fluid img-product" alt=""> 

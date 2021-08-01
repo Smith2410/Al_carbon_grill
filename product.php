@@ -11,7 +11,6 @@
     <body >
         <?php include './include/navbar.php'; ?> 
         <main id="main">
-
             <section class="specials">
                 <div class="chefs container p-top" data-aos="fade-up">
                     <?php
@@ -21,8 +20,19 @@
                             <div class="container-fluid">
                                 <div class="row">
 
+                                    <!-- ======= Boton movil categoria ======= -->
+                                    <div class="d-lg-none d-md-none" data-aos="fade-up" data-aos-delay="100" style="margin-bottom: 15px;">
+                                        <ul class="nav nav-tabs flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link active show btn d-lg-none" href="#" data-toggle="modal" data-target="#modalCategoryMovil">Categorias<i class="bi bi-plus" style="color: white;"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
                                     <!-- ======= Categorias ======= -->
-                                    <div class="col-lg-2 col-md-3" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="col-lg-2 col-md-3 d-none d-lg-block d-md-block" data-aos="fade-up" data-aos-delay="100">
                                         <ul class="nav nav-tabs flex-column">
                                             <li class="nav-item">
                                                 <a class="nav-link active show" href="#">Categorias</a>
@@ -68,7 +78,7 @@
                                                             while($prod=mysqli_fetch_array($consultar_productos, MYSQLI_ASSOC))
                                                             {
                                                                 ?>
-                                                                <div class="col-lg-3 col-md-6">
+                                                                <div class="col-lg-3 col-md-4 col-6">
                                                                     <div class="member" data-aos="zoom-in" data-aos-delay="100">
                                                                         <div class="container-img-2">
                                                                             <img src="<?php echo SERVERURL; ?>assets/img-products/<?php if($prod['Imagen']!="" && is_file("<?php echo SERVERURL; ?>assets/img-products/".$prod['Imagen'])){ echo $prod['Imagen']; }else{ echo "default.png"; } ?>" class="img-fluid img-product" alt="">
@@ -122,7 +132,7 @@
                                                             while($fila=mysqli_fetch_array($consulta, MYSQLI_ASSOC))
                                                             {
                                                                 ?>
-                                                                <div class="col-lg-3 col-md-4">
+                                                                <div class="col-lg-3 col-md-4 col-6">
                                                                     <div class="member" data-aos="zoom-in" data-aos-delay="100">
                                                                         <div class="container-img-2">
                                                                             <img src="<?php echo SERVERURL; ?>assets/img-products/<?php if($fila['Imagen']!="" && is_file("<?php echo SERVERURL; ?>assets/img-products/".$fila['Imagen'])){ echo $fila['Imagen'];}else{ echo "default.png"; } ?>" class="img-fluid img-product" alt="">
@@ -167,6 +177,49 @@
                 </div>
             </section>
         </main>
+
+        <!-- ======= Modal - Categorias / Movil ======= -->
+        <div id="modalCategoryMovil" class="modal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content" style="color: black;">
+                    <div class="modal-header">
+                        <h1>
+                            Categorias
+                        </h1>
+                    </div>
+                    <?php
+                    $checkAllCat=ejecutarSQL::consultar("SELECT * FROM categoria");
+                    if(mysqli_num_rows($checkAllCat)>=1):
+                        ?>
+                        <div class="modal-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="col-12">
+                                      <a class="nav-link caja" href="<?php echo SERVERURL; ?>product.php">Todos</a>
+                                </li>
+                                <div class="row">
+                                   <?php 
+                                    while($cate=mysqli_fetch_array($checkAllCat, MYSQLI_ASSOC))
+                                    {
+                                        ?>
+                                        <li class="col-6">
+                                            <a class="nav-link caja" href="<?php echo SERVERURL; ?>product.php?categ=<?php echo $cate['id']; ?>"><?php echo $cate['Categoria']; ?></a>
+                                        </li>
+                                        <?php 
+                                    }
+                                ?> 
+                                </div>
+                            </ul>
+                        </div>
+                        <?php
+                    endif;
+                    ?>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <?php include './include/footer.php'; ?>
     </body>
 </html>

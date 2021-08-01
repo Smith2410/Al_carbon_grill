@@ -10,6 +10,8 @@
             <section class="specials">
                 <div class="container p-top" data-aos="fade-up">
                     <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+                        <!-- ===== Menu lateral ===== -->
                         <div class="col-lg-2 col-md-3">
                             <ul class="nav nav-tabs flex-column">
                                 <li class="nav-item">
@@ -20,6 +22,8 @@
                                 </li>
                             </ul>
                         </div>
+
+                        <!-- ===== Datos para actualizar ===== -->
                         <div class="col-lg-10 col-md-9 mt-4 mt-lg-0">
                             <div class="tab-content">
                                 <div class="tab-pane active show" id="tab-2">

@@ -7,7 +7,7 @@
     <body >
         <?php include './include/navbar.php'; ?> 
         <main id="main">
-            <!-- ======= Metodo de pago ======= -->   
+            <!-- ======= Pago pendiente ======= -->   
             <section id="container-pedido">
                 <div class="container p-top">
                     <div>
@@ -77,7 +77,7 @@
                             <div class="col-lg-9 mt-4 mt-lg-0">
                                 <div class="tab-content">
 
-                                    <!-- ======= Pedidos======= -->  
+                                    <!-- ======= Todos los pedidos======= -->  
                                     <div class="tab-pane active show" id="tab-all">
                                         <?php
                                             if($_SESSION['UserType']=="User")

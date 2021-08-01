@@ -8,7 +8,7 @@
         <?php include './include/navbar.php'; ?> 
         <?php include './include/slider.php'; ?> 
         <main id="main">
-            <!-- ======= Chefs Section ======= -->
+            <!-- ======= Platillos recientes ======= -->
             <section class="chefs">
                 <div class="container" data-aos="fade-up">
                     <div class="section-title">
@@ -27,10 +27,13 @@
                                     ?>
                                     <div class="col-lg-3 col-md-4 col-6">
                                         <div class="member" data-aos="zoom-in" data-aos-delay="100">
+
+                                            <!-- ===== Imagen del plaillo ===== -->
                                             <div class="container-img">
                                                 <img src="<?php echo SERVERURL; ?>assets/img-products/<?php if($fila['Imagen']!="" && is_file("<?php echo SERVERURL; ?>assets/img-products/".$fila['Imagen'])){ echo $fila['Imagen']; }else{ echo "default.png"; } ?>" class="img-fluid img-product" alt="">
                                             </div>
                                             
+                                            <!-- ===== Datos del platillo ===== -->
                                             <div class="member-info">
                                                 <div class="member-info-content">
                                                     <h4><?php echo $fila['NombreProd']; ?></h4>

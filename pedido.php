@@ -7,8 +7,8 @@
     <body >
         <?php include './include/navbar.php'; ?> 
         <main id="main">
-            <!-- ======= Pago pendiente ======= -->   
             <section id="container-pedido">
+                <!-- ======= Pago pendiente ======= --> 
                 <div class="container p-top">
                     <div>
                         <?php
@@ -38,7 +38,7 @@
                                     <?php
                                 }else{
                                     ?>
-                                    <p class="text-center lead">No tienes pedidos pendientes de pago</p>
+                                    <p class="text-center">No tienes pedidos pendientes de pago</p>
                                     <?php
                                 }
                             }else{
@@ -57,7 +57,27 @@
                             <p>Mis pedidos</p>
                         </div>
                         <div class="row" data-aos="fade-up" data-aos-delay="100">
-                            <div class="col-lg-3">
+
+                            <!-- ======= Menu movil pedidos ======= -->
+                            <div class="d-lg-none d-md-none">
+                                <ul class="nav nav-tabs">
+                                    <li class="btnforn">
+                                        <a class="nav-link active show" data-bs-toggle="tab" href="#tab-all">Todos</a>
+                                    </li>
+                                    <li class="btnforn">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#tab-pendiente">Pendientes</a>
+                                    </li>
+                                    <li class="btnforn">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#tab-envido">Enviados</a>
+                                    </li>
+                                    <li class="btnforn">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#tab-entregado">Entregados</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- ======= Menu pedidos======= --> 
+                            <div class="col-lg-3 col-md-4 d-none d-lg-block d-md-block">
                                 <ul class="nav nav-tabs flex-column">
                                     <li class="nav-item">
                                         <a class="nav-link active show" data-bs-toggle="tab" href="#tab-all">Todos mis pedidos</a>
@@ -74,7 +94,8 @@
                                 </ul>
                             </div>
 
-                            <div class="col-lg-9 mt-4 mt-lg-0">
+                            <!-- ======= Pedidos======= --> 
+                            <div class="col-lg-9 col-md-8">
                                 <div class="tab-content">
 
                                     <!-- ======= Todos los pedidos======= -->  

@@ -33,7 +33,7 @@
                     <div class="row" data-aos="fade-up" data-aos-delay="100">
 
                         <!-- ======= Boton movil administracion ======= -->
-                        <div class="d-lg-none d-md-none" data-aos="fade-up" data-aos-delay="100">
+                        <div class="d-lg-none d-md-none mb" data-aos="fade-up" data-aos-delay="100">
                             <ul class="nav nav-tabs flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link active show btn d-lg-none" href="#" data-toggle="modal" data-target="#modalReparMovil">Opciones de repartidor<i class="bi bi-plus" style="color: white;"></i>
@@ -43,7 +43,7 @@
                         </div>
 
                         <!-- ===== Menu lateral ===== -->
-                        <div class="col-lg-2 col-md-3">
+                        <div class="col-lg-2 col-md-3 d-none d-lg-block d-md-block">
                             <ul class="nav nav-tabs flex-column">
                                 <li class="nav-item">
                                     <a class="nav-link active show" href="#">Administración</a>
@@ -55,7 +55,7 @@
                         </div>
 
                         <!-- ===== Contenido del menu lateral===== -->
-                        <div class="col-lg-10 col-md-9 mt-4 mt-lg-0">
+                        <div class="col-lg-10 col-md-9">
                             <div class="tab-content">
                                 <div class="tab-pane active show" id="tab-2">
                                     <div class="row">
@@ -63,7 +63,7 @@
                                             <?php
                                                 $content=$_GET['view'];
 
-                                                /** Lista blanca */
+                                                /** Lista blanca **/
                                                 $WhiteList=["order","detalle","orderinfo","orderPendiente","orderEnviado","orderEntregado","account"];
                                                 if(isset($content))
                                                 {
@@ -137,7 +137,7 @@
                             </ul>
                         </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>

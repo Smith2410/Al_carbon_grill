@@ -18,14 +18,14 @@
         ?>
         <form action="./process/updateAdmin.php" method="POST" role="form" class="FormCatElec" data-form="update">
         	<input type="hidden" name="admin-code" value="<?php echo $_SESSION['adminID']; ?>">
-        	<input type="hidden" name="admin-user-old" value="<?php echo $dataAdmin['Nombre']; ?>">
+        	<input type="hidden" name="admin-user-old" value="<?php echo $dataAdmin['Usuario']; ?>">
             <div class="contact">
                 <div class="container-fluid php-email-form">
                     <div class="row">
                         <div class="col-lg-2">
                             <div class="form-group">
                                 <label>DNI</label>
-                                <input class="form-control" type="text" name="admin-dni" value="<?php echo $dataAdmin['DNI']; ?>"required="">
+                                <input class="form-control" type="text" name="admin-dni" value="<?php echo $dataAdmin['DNI']; ?>"required="" readonly="">
                             </div>
                         </div>
                         <div class="col-lg-5">

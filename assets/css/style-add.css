@@ -77,9 +77,32 @@
   background-color: #0c0b09;
   border-radius: 10px;
   color: #cda45e;
+  align-items: center;
   text-align: center;
   width: auto;
   height: 60px;
   margin-top: 5px;
   font-size: 14px;
+}
+
+.btnforn{
+  height: 50px;
+  width: auto;
+  background-color: #28251f;
+  align-items: center;
+  text-align: center;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 15px;
+}
+.section-title{
+  padding-bottom: 5px;
+}
+
+.container-fluid{
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.mb{
+  margin-bottom: 15px;
 }

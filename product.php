@@ -21,7 +21,7 @@
                                 <div class="row">
 
                                     <!-- ======= Boton movil categoria ======= -->
-                                    <div class="d-lg-none d-md-none" data-aos="fade-up" data-aos-delay="100" style="margin-bottom: 15px;">
+                                    <div class="d-lg-none d-md-none mb" data-aos="fade-up" data-aos-delay="100">
                                         <ul class="nav nav-tabs flex-column">
                                             <li class="nav-item">
                                                 <a class="nav-link active show btn d-lg-none" href="#" data-toggle="modal" data-target="#modalCategoryMovil">Categorias<i class="bi bi-plus" style="color: white;"></i>
@@ -214,7 +214,7 @@
                     endif;
                     ?>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>

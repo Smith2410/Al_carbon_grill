@@ -30,14 +30,14 @@
                                         {
                                             ?>
                                             <!-- === Lista de platillos encontrados ======= -->
-                                            <div class="col-xs-12">
+                                            <div class="container">
                                                 <h3 class="text-center"><?php echo $search; ?></h3>
                                             </div><br>
                                             <?php 
                                             while($prod=mysqli_fetch_array($consultar_productos, MYSQLI_ASSOC))
                                             {
                                                 ?>
-                                                <div class="col-lg-3 col-md-3">
+                                                <div class="col-lg-3 col-md-4 col-6">
                                                     <div class="member" data-aos="zoom-in" data-aos-delay="100">
                                                         <div class="container-img">
                                                             <img src="<?php echo SERVERURL; ?>assets/img-products/<?php if($prod['Imagen']!="" && is_file("<?php echo SERVERURL; ?>assets/img-products/".$prod['Imagen'])){ echo $prod['Imagen']; }else{ echo "default.png"; } ?>" class="img-fluid img-product" alt="">
